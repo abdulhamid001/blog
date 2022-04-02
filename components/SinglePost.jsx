@@ -42,7 +42,22 @@ const SinglePost = ({ slug, categories }) => {
             </div>
           </div>
           <Link href={`/post/${post.slug}`}>
-            <span className="cursor-pointer absolute w-full h-full" />
+            <div className="transition duration-500 hover:-translate-x-3 hover:bg-indigo-700 hover:text-white absolute arrow-btn -left-4 top-20 mt-10 text-center py-3 px-3 cursor-pointer bg-white rounded-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 text-indigo w-full"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                />
+              </svg>
+            </div>
           </Link>
         </div>
       ))}
