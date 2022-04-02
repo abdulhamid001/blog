@@ -13,8 +13,8 @@ const SinglePost = ({ slug, categories }) => {
   }, []);
   return (
     <>
-      {singlePost.map((post) => (
-        <div className="relative h-72">
+      {singlePost.map((post, idx) => (
+        <div key={idx} className="relative h-72">
           <div
             className="absolute rounded-lg bg-center bg-no-repeat bg-cover shadow-md inline-block w-full h-72"
             style={{ backgroundImage: `url('${post.featuredImage.url}')` }}
