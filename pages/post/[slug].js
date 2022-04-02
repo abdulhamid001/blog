@@ -9,6 +9,7 @@ import {
   CommentsForm,
   Comments,
   Loader,
+  SinglePost,
 } from "../../components";
 import { getPostDetails, getPosts } from "../../services";
 
@@ -36,6 +37,10 @@ const PostDetails = ({ post }) => {
           <Author author={post.author} />
           <CommentsForm slug={post.slug} />
           <Comments slug={post.slug} />
+          <SinglePost
+            slug={post.slug}
+            categories={post.categories.map((category) => category.slug)}
+          />
         </div>
       </div>
     </div>
